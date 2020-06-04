@@ -11,26 +11,32 @@ class Gugudan extends Component {
      }
   }
 
+  input;
+
   onKeyDown = (e) => {
     this.setState({ value: Number(e.target.value) });
   }
 
   calculate = (e) => {
     e.preventDefault();
-    return this.state.first * this.state.last === this.state.value ? 
-    this.setState((prevState) => { 
-      console.log('prevState ::: ', prevState);
-      return {
-        result: '딩동댕!' + prevState.value, 
-        first: Math.ceil(Math.random() * 9), 
-        last: Math.ceil(Math.random() * 9), 
-        value: ''
-      }
-     }) : 
-    this.setState({ 
-      result: '땡', 
-      value: '' 
-    });
+    if(this.state.first * this.state.last === this.state.value) {
+      this.setState((prevState) => {
+        return {
+          result: '딩동댕!' + prevState.value, 
+          first: Math.ceil(Math.random() * 9), 
+          last: Math.ceil(Math.random() * 9), 
+          value: ''
+        }
+       })
+    } else {
+      
+      this.setState({ 
+        result: '땡', 
+        value: '' 
+      });
+    } 
+
+    this.input.focus();
   }
 
   render() { 
@@ -38,7 +44,7 @@ class Gugudan extends Component {
       <>
         {this.state.first} 곱하기 {this.state.last}는?
         <form onClick={this.calculate}>
-          <input type="number" value={this.state.value} onChange={this.onKeyDown}/>
+          <input ref={c => this.input = c} type="number" value={this.state.value} onChange={this.onKeyDown}/>
           <button>입력</button>
         </form>
         <div>
