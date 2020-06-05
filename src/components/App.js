@@ -1,5 +1,6 @@
 import React from 'react';
 import Gugudan from './Gugudan';
+import GugudanHooks from './GugudanHooks';
 
 class App extends React.Component {
   constructor(props) {
@@ -10,6 +11,7 @@ class App extends React.Component {
     return ( 
       <div>
         <Gugudan />
+        <GugudanHooks />
       </div> 
     );
   }

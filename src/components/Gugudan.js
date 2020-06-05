@@ -43,7 +43,7 @@ class Gugudan extends Component {
     return ( 
       <>
         {this.state.first} 곱하기 {this.state.last}는?
-        <form onClick={this.calculate}>
+        <form onSubmit={this.calculate}>
           <input ref={c => this.input = c} type="number" value={this.state.value} onChange={this.onKeyDown}/>
           <button>입력</button>
         </form>
