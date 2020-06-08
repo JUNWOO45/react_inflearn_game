@@ -1,0 +1,8 @@
+.waiting {
+  background-color: rgb(253, 169, 169);
+  width: 200px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
