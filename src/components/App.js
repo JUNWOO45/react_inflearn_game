@@ -3,6 +3,7 @@ import Gugudan from './Gugudan';
 import GugudanHooks from './GugudanHooks';
 import WordRelay from './WordRelay';
 import WordRelayHooks from './WordRelayHooks';
+import NumberBaseball from './NumberBaseball';
 
 class App extends React.Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class App extends React.Component {
         <GugudanHooks />
         <WordRelay />
         <WordRelayHooks />
+        <NumberBaseball />
       </div> 
     );
   }

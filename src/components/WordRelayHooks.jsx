@@ -1,11 +1,12 @@
 import React from 'react';
+import { useState, useRef} from 'react';
 
 const WordRelayHooks = () => {
-  const [word, setWord] = React.useState('박준우');
-  const [value, setValue] = React.useState('');
-  const [result, setResult] = React.useState('');
+  const [word, setWord] = useState('박준우');
+  const [value, setValue] = useState('');
+  const [result, setResult] = useState('');
 
-  const inputRef = React.useRef(null);
+  const inputRef = useRef(null);
 
   const calculate = (e) => {
     e.preventDefault();
