@@ -5,13 +5,22 @@ import WordRelay from './WordRelay';
 import WordRelayHooks from './WordRelayHooks';
 import NumberBaseball from './NumberBaseball';
 import ResponseCheck from './ResponseCheck';
+import RSP from './RSP';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {  }
+  state = { 
+    RSPToggled: false  
+  };
+
+  toggleRSP = () => {
+    this.setState({ RSPToggled: !this.state.RSPToggled  });
   }
-  render() { 
+
+  renderRSP = () => {
+    return this.state.RSPToggled ? <RSP /> : null;
+  }
+
+  render() {
     return ( 
       <div>
         <Gugudan />
@@ -20,6 +29,8 @@ class App extends React.Component {
         <WordRelayHooks />
         <NumberBaseball />
         <ResponseCheck />
+        <button onClick={ this.toggleRSP }>가위바위보</button>
+        { this.renderRSP() }
       </div> 
     );
   }

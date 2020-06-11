@@ -5,12 +5,10 @@ const ResponseCheck = () => {
   const [state, setState] = React.useState('waiting');
   const [message, setMessage] = React.useState('클릭해서 시작해보세요.');
   const [result, setResult] = React.useState([]);
+  
   const timeout = React.useRef(null);
   const startTime = React.useRef();
   const endTime = React.useRef();
-  // let timeout;
-  // let startTime;
-  // let endTime;
 
   const onClick = () => {
     if(state === 'waiting') {
