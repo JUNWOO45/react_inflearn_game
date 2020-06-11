@@ -26,7 +26,7 @@ const GugudanHooks = () => {
     setValue(e.target.value);
   }
 
-  console.log('rendering')
+  // console.log('rendering')
 
   return (
       <>

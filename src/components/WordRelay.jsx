@@ -9,7 +9,7 @@ class WordRelay extends Component {
 
   calculate = (e) => {
     e.preventDefault();
-    console.log(this.state.value.slice(0), this.state.word.slice(-1))
+    // console.log(this.state.value.slice(0), this.state.word.slice(-1))
     if(this.state.value.slice(0, 1) === this.state.word.slice(-1)) {
       this.setState({ word: this.state.value, value: '', result: '딩동댕' });
     } else {
@@ -30,7 +30,7 @@ class WordRelay extends Component {
   }
 
   render() { 
-    console.log('렌더링')
+    // console.log('렌더링')
     return ( 
       <>
         <br />
